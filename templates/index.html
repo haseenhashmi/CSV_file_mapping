@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastApi</title>
+    <style>
+    body {
+        margin: 100;
+        padding: 100;
+        display: flex;
+        justify-content: center;
+        align-items: right;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    .form {
+        width: 180px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>CSV File Mapping(.csv)</h1>
+        <form action="/upload/" method="post" enctype="form-data" class="form">
+            <input type="file" name="file" accept=".csv" required>
+            <label for="name">Name Column:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="age">Age Column:</label>
+            <input type="text" id="age" name="age" required>
+            <input type="submit" value="Upload">
+        </form>
+        
+    </div>
+</body>
+</html>
